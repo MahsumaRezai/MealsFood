@@ -10,7 +10,7 @@ const Header = (prop) => {
                 <button>Cart</button>
             </header>
             <div className={classes['main-image']}>
-                <img src={image} />
+                <img src={image} alt="" />
             </div>
 
         </Fragment>
