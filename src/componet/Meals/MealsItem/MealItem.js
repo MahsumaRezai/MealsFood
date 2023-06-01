@@ -1,4 +1,3 @@
-import MealsFrom from './MealsFrom';
 import classes from './MealsItme.module.css'
 const MealItem = (props) => {
     const price = `$${props.price.toFixed(2)}`;
@@ -11,7 +10,6 @@ const MealItem = (props) => {
                 <div className={classes.price}>{price}</div>
             </div>
             <div>
-                <MealsFrom />
             </div>
         </li>
     );
