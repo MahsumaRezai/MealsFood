@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import classes from './Modal.module.css';
 import ReactDom from 'react-dom'
 const Backdorp = (porps) => {
-    return <div className={classes.backdrop} />
+    return <div className={classes.backdrop} onClick={porps.onClose} />
 }
 const ModalOverly = (props) => {
     return (
@@ -16,7 +16,7 @@ const portlelement = document.getElementById('overley');
 
 const Modal = (props) => {
     return <Fragment>
-        {ReactDom.createPortal(<Backdorp />, portlelement)}
+        {ReactDom.createPortal(<Backdorp onClose={props.onClose} />, portlelement)}
         {ReactDom.createPortal(<ModalOverly>{props.children}</ModalOverly>, portlelement)}
 
     </Fragment>

@@ -8,14 +8,14 @@ const Cart = (porps) => {
     </ul>
     );
     return (
-        <Modal>
+        <Modal onClose={porps.onClose}>
             {cartItems}
             <div className={classes.total}>
                 <span>Total Amount</span>
                 <span>35.76</span>
             </div>
             <div className={classes.actions}>
-                <button className={classes['button--all']}>Close</button>
+                <button className={classes['button--all']} onClick={porps.onClose}>Close</button>
                 <button className={classes.button}>Order</button>
 
             </div>
